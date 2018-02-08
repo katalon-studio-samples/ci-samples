@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -xe
+
 rm -rfv ./reports/firefox
 mkdir -p ./reports/firefox
 
