@@ -1,1 +1,6 @@
 /reports
+/bin/
+/Libs/
+/.settings/
+/.classpath
+.svn/
