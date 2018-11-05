@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'katalon'
+                sh 'katalon-execute.sh'
             }
         }
     }
