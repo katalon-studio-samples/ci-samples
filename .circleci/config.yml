@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: katalonstudio/katalon:test
+    steps:
+      - checkout
+      - run:
+          name: Execute Katalon Studio
+          command: katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+      - store-test_results:
+          path: ./report
+      - store-artifacts:
+          path: ./report
