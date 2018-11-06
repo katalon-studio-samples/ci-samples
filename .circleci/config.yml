@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: katalonstudio/katalon:test
+      - image: katalonstudio/katalon
     steps:
       - checkout
       - run:
