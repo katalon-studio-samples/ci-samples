@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'katalonstudio/katalon:test'
+            image 'katalonstudio/katalon'
             args "-u root"
         }
     }
