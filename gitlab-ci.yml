@@ -5,11 +5,12 @@ services:
 stages:
   - test
 
-after_script:
-   - archiveArtifacts artifacts: 'report/**/*.*', fingerprint: true
-   - junit 'report/**/JUnit_Report.xml'
-
-test1:
+test_job:
   stage: test
   script:
-   - katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+    - katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME"
+    paths:
+      - report/
+      - junit 'report/**/JUnit_Report.xml'
