@@ -1,0 +1,15 @@
+image: katalonstudio/katalon
+services:
+  - docker:dind
+
+stages:
+  - test
+
+after_script:
+   - archiveArtifacts artifacts: 'report/**/*.*', fingerprint: true
+   - junit 'report/**/JUnit_Report.xml'
+
+test1:
+  stage: test
+  script:
+   - katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
