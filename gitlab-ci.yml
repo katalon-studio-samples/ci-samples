@@ -1,0 +1,18 @@
+image: katalonstudio/katalon
+services:
+  - docker:dind
+
+stages:
+  - test
+
+test_job:
+  stage: test
+  script:
+    - katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+  artifacts:
+    name: "$CI_COMMIT_REF_NAME"
+    paths:
+      - report/
+    reports:
+      junit:
+      - 'report/*.xml'
