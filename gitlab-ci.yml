@@ -13,4 +13,6 @@ test_job:
     name: "$CI_COMMIT_REF_NAME"
     paths:
       - report/
-      - junit 'report/**/JUnit_Report.xml'
+    reports:
+      junit:
+      - 'report/*.xml'
