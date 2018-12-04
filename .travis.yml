@@ -3,7 +3,7 @@ services:
   - docker
 before_install:
 - docker pull katalonstudio/katalon
-- docker run -d katalonstudio/katalon --name katalonstudio /bin/bash
+- docker run -d --name katalonstudio katalonstudio/katalon  /bin/bash
 - docker ps -a
 
 script:
