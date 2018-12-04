@@ -3,9 +3,8 @@ services:
   - docker
 before_install:
 - docker build -t katalonstudio/katalon .
-- docker pull katalonstudio/katalon
-- docker run -d --name katalonstudio katalonstudio/katalon  /bin/bash
+- docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
 - docker ps -a
-- docker exec -it katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+- docker run katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
 script:
-- docker exec -it katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+- docker run katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
