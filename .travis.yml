@@ -5,6 +5,5 @@ before_install:
 - docker pull katalonstudio/katalon
 - docker run -d --name katalonstudio katalonstudio/katalon  /bin/bash
 - docker ps -a
-- docker exec -it katalonstudio /bin/sh -c "ls /katalon/katalon/script/"
 script:
-- docker ps -a
+- docker exec -it katalonstudio /bin/sh -c 'cd /katalon/katalon/scripts && katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
