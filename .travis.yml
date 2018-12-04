@@ -7,6 +7,7 @@ addons:
     - junit
   artifacts:
     target_paths: report/*
+    debug: true
 before_install:
 - docker build -t katalonstudio/katalon .
 - docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
