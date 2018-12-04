@@ -2,6 +2,7 @@ language: java
 services:
   - docker
 before_install:
+- docker build -t katalonstudio/katalon .
 - docker pull katalonstudio/katalon
 - docker run -d --name katalonstudio katalonstudio/katalon  /bin/bash
 - docker ps -a
