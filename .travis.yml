@@ -1,4 +1,4 @@
-language: katalonstudio/katalon
+language: java
 services:
   - docker
 before_install:
@@ -7,4 +7,4 @@ before_install:
 - docker ps -a
 
 script:
-- docker exec -it katalonstudio /bin/sh -c "cd /katalon/katalon/script/; ./katalon-execute.sh -browserType='Chrome' -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'"
+- docker exec -it katalonstudio /bin/sh -c "ls /katalon/katalon/script/"
