@@ -6,4 +6,4 @@ before_install:
 - docker run -d --name katalonstudio katalonstudio/katalon  /bin/bash
 - docker ps -a
 script:
-- ddocker exec -it katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+- docker exec -it katalonstudio /bin/sh -c 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
