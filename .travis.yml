@@ -1,6 +1,12 @@
 language: java
 services:
   - docker
+addons:
+  apt:
+    packages:
+    - junit
+  artifacts:
+    target_paths: report/*
 before_install:
 - docker build -t katalonstudio/katalon .
 - docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
