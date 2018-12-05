@@ -9,6 +9,7 @@ addons:
     target_paths: report/*
     debug: true
 before_install:
+- cd java
 - docker build -t katalonstudio/katalon .
 - docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
 - docker ps -a
