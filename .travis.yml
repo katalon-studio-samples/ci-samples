@@ -4,8 +4,16 @@ services:
 addons:
   apt:
     packages:
+      # Install the junit
     - junit
   artifacts:
+    # if would like to download artifacts ,travis-ci recommend to upload the remote location like aws s3
+    # set enviroment variable in travis-ci
+    # ARTIFACTS_KEY=(AWS access key id)
+    # ARTIFACTS_SECRET=(AWS secret access key)
+    # ARTIFACTS_BUCKET=(S3 bucket name)
+    # For more information configuration for this ,please refer https://docs.travis-ci.com/user/uploading-artifacts/
+    # this example is store to local hard disk travis-ci
     target_paths: report/*
     debug: true
 before_install:
