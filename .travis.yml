@@ -2,10 +2,6 @@ language: java
 services:
   - docker
 addons:
-  apt:
-    packages:
-      # Install the junit
-    - junit
   artifacts:
     # if would like to download artifacts ,travis-ci recommend to upload the remote location like aws s3
     # set enviroment variable in travis-ci
@@ -23,6 +19,3 @@ jobs:
       script: 
         - docker pull katalonstudio/katalon
         - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-after_script:
-  - echo $(pwd)
-  - junit "report/*.xml"
