@@ -12,10 +12,12 @@ before_install:
 - docker build -t katalonstudio/katalon .
 - docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
 - docker ps -a
-script:
-- docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-- echo $(pwd)
-- cd report
-- ls -la
-- cat JUnit_Report.xml
-- junit JUnit_Report.xml
+jobs:  
+  include:
+    - stage: "Test"
+      name: "Run Test"
+      script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"\
+    - stage: "Run Test Report"
+      name: "JUnit the artifacts report"
+      script: junit "$(pwd)/report/*.xml"
+     
