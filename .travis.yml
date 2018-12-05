@@ -1,0 +1,21 @@
+language: java
+services:
+  - docker
+addons:
+  artifacts:
+    # if would like to download artifacts ,travis-ci recommend to upload the remote location like aws s3
+    # set enviroment variable in travis-ci
+    # ARTIFACTS_KEY=(AWS access key id)
+    # ARTIFACTS_SECRET=(AWS secret access key)
+    # ARTIFACTS_BUCKET=(S3 bucket name)
+    # For more information configuration for this ,please refer https://docs.travis-ci.com/user/uploading-artifacts/
+    # this example is store to local hard disk travis-ci
+    target_paths: report/*
+    debug: true
+jobs:  
+  include:
+    - stage: "Test"
+      name: "Run Test and report"
+      script: 
+        - docker pull katalonstudio/katalon
+        - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
