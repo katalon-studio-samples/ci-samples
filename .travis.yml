@@ -17,4 +17,4 @@ script:
 - echo $(pwd)
 - cd report
 - ls -la
-- junit *.xml
+- cat JUnit_Report.xml
