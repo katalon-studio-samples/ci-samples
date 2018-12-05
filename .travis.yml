@@ -21,3 +21,4 @@ jobs:
 after_script:
   - echo $(pwd)
   - junit "report/*.xml"
+  - ant test
