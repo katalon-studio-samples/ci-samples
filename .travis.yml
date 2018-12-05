@@ -18,4 +18,5 @@ jobs:
       name: "Run Test and report"
       script: 
         - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-        - ant -f "$(pwd)/report/JUnit_Report.xml"
+after_script:
+  - junit "report/*.xml"
