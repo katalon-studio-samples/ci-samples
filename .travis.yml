@@ -9,7 +9,6 @@ addons:
     target_paths: report/*
     debug: true
 before_install:
-- cd java
 - docker build -t katalonstudio/katalon .
 - docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
 - docker ps -a
@@ -19,4 +18,4 @@ jobs:
       name: "Run Test and report"
       script: 
         - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-        - junit "$(pwd)/report/*.xml"
+        - ant -f "$(pwd)/report/*.xml"
