@@ -16,15 +16,12 @@ addons:
     # this example is store to local hard disk travis-ci
     target_paths: report/*
     debug: true
-before_install:
-- docker build -t katalonstudio/katalon .
-- docker run -d --name katalonstudio katalonstudio/katalon /bin/bash
-- docker ps -a
 jobs:  
   include:
     - stage: "Test"
       name: "Run Test and report"
       script: 
+        - docker pull katalonstudio/katalon
         - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
 after_script:
   - echo $(pwd)
