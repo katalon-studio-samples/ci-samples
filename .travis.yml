@@ -15,9 +15,7 @@ before_install:
 jobs:  
   include:
     - stage: "Test"
-      name: "Run Test"
-      script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"\
-    - stage: "Run Test Report"
-      name: "JUnit the artifacts report"
-      script: junit "$(pwd)/report/*.xml"
-     
+      name: "Run Test and report"
+      script: 
+        - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+        - junit "$(pwd)/report/*.xml
