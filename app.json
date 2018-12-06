@@ -1,3 +1,4 @@
 {
-  "image": "katalonstudio/katalon"
+  "image": "katalonstudio/katalon",
+  "repository": "https://github.com/datquach/katalon-ci-samples"
 }
