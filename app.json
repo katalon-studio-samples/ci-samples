@@ -8,13 +8,13 @@
     "repository": "https://github.com/datquach/katalon-ci-samples.git",
     "image": "katalonstudio/katalon",
     "buildpacks": [
-        { "url": "heroku/jvm" }
-      ],
+      { "url": "heroku/jvm" }
+    ],
     "environments": {
       "test": {
         "scripts": {
-            "test": "katalon-execute.sh -browserType='Chrome' -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'"
-          }
+          "test": "katalon-execute.sh -browserType='Chrome' -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'"
+        }
       }
     }
   }
