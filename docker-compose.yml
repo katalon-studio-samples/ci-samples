@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  katalon:
+    image: katalonstudio/katalon:latest
+    container_name: katalon
+    hostname: katalon
+    volumes: 
+      - .:/katalon/katalon/source
+    entrypoint: katalon-execute.sh
+    command: -propertiesFile=/katalon/katalon/source/console.properties
