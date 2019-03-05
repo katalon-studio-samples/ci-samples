@@ -7,4 +7,4 @@ services:
     volumes: 
       - .:/katalon/katalon/source
     entrypoint: katalon-execute.sh
-    command: -propertiesFile=/katalon/katalon/source/console.properties
+    command: -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
