@@ -1,0 +1,10 @@
+version: "2"
+services:
+  katalon:
+    image: katalonstudio/katalon:latest
+    container_name: katalon
+    hostname: katalon
+    volumes: 
+      - .:/katalon/katalon/source
+    entrypoint: katalon-execute.sh
+    command: -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
