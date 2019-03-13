@@ -1,5 +1,5 @@
 - name: "Katalon Test"
-  command: katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+  command: "echo test"
   plugins:
     - docker-compose#v2.1.0:
         run: katalon
