@@ -3,5 +3,5 @@
     - docker-compose#v2.1.0:
         run: katalon
     - command: katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-    - artifacts#v1.2.0:
-        upload: "report/*"
+    - junit-annotate#v1.4.1:
+        artifacts: "report/*.xml"
