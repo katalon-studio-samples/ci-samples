@@ -2,3 +2,5 @@
   plugins:
     - docker-compose#v2.1.0:
         run: katalon
+    - artifacts#v1.2.0:
+        upload: "report/*"
