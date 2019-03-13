@@ -1,0 +1,7 @@
+- name: "Katalon Test"
+  command: "echo test"
+  plugins:
+    - docker-compose#v2.1.0:
+        run: katalon
+    - junit-annotate#v1.4.1:
+        artifacts: "report/*.xml"
