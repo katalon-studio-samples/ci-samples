@@ -1,4 +1,4 @@
-codeship_katalon:
+katalon:
   build:
     image: katalonstudio/katalon:latest
     dockerfile: Dockerfile
