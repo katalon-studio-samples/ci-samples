@@ -1,6 +1,5 @@
 - type: parallel
   tag: codeship
-  dockercfg_service: dockercfg_generator
   steps:
   - type: serial
     steps:
