@@ -1,7 +1,6 @@
-- type: parallel
+- type: serial
   tag: codeship
+  service: katalon
   steps:
-  - type: serial
-    steps:
-      - service: katalon
-        command: katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+    - name: 'Katalon Studio Test'
+      command: katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
