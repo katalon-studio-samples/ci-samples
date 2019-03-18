@@ -2,5 +2,7 @@
   tag: codeship
   service: katalon
   steps:
+    - name: "Map folder Test Suites"
+      command: ln -s Test\ Suites TestSuites
     - name: 'Katalon Studio Test'
-      command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'
+      command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='TestSuites/TS_RegressionTest'
