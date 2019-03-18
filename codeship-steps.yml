@@ -1,7 +1,8 @@
 - type: serial
   tag: codeship
+  service: katalon
   steps:
-    - name: "List files"
-      command: ls -la ./
+    - name: "Navigate to folder katalon"
+      command: cd /opt/katalonstudio/katalon
     - name: 'Katalon Studio Test'
       command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='TestSuites/TS_RegressionTest'
