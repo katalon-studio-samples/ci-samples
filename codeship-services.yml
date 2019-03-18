@@ -2,7 +2,7 @@ katalon:
   build:
     image: katalonstudio/katalon:latest
     dockerfile: Dockerfile
-environment:
+  environment:
   - PATHPROJECT="Test\ Suites"
   volumes:
     - .:/katalon/katalon/source
