@@ -1,10 +1,7 @@
 - type: serial
   tag: codeship
-  service: katalon
   steps:
     - name: "List files"
       command: ls -la ./
-    - name: "Map folder Test Suites"
-      command: sudo ln -s  Test\ Suites/ ./TestSuites
     - name: 'Katalon Studio Test'
       command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='TestSuites/TS_RegressionTest'
