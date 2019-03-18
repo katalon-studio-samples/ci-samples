@@ -3,6 +3,6 @@ katalon:
     image: katalonstudio/katalon:latest
     dockerfile: Dockerfile
 environment:
-  - PATHPROJECT="Test Suites/TS_RegressionTest"
+  - PATHPROJECT="Test\ Suites/TS_RegressionTest"
   volumes:
     - .:/katalon/katalon/source
