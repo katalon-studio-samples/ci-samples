@@ -2,9 +2,5 @@
   tag: codeship
   service: katalon
   steps:
-    - name: "List all files"
-      command: 'ls -la'
-    - name: "Navigate to folder katalon"
-      command: cd /tmp/
     - name: 'Katalon Studio Test'
       command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='TestSuites/TS_RegressionTest'
