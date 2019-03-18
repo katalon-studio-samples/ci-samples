@@ -1,6 +1,8 @@
 - type: serial
   tag: codeship
   service: katalon
+  environment:
+  - PATHPROJECT="Test\ Suites/TS_RegressionTest"
   steps:
     - name: 'Katalon Studio Test'
       command: 'katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath=$PATHPROJECT'
