@@ -1,0 +1,6 @@
+katalon:
+  build:
+    image: katalonstudio/katalon:latest
+    dockerfile: Dockerfile
+  volumes:
+    - .:/katalon/katalon/source

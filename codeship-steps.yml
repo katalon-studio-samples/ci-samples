@@ -1,0 +1,6 @@
+- type: serial
+  tag: codeship
+  service: katalon
+  steps:
+    - name: 'Katalon Studio Test'
+      command: katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath=TestSuites/TS_RegressionTest
