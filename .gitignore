@@ -4,3 +4,6 @@
 /.classpath
 .svn/
 /Reports
+/.project
+/.gradle/
+/Drivers/
