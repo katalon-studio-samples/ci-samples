@@ -1,0 +1,1 @@
+git archive --format zip --output ci-samples.zip master
