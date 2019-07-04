@@ -9,7 +9,7 @@ Samples for CI configurations using Docker images at https://github.com/katalon-
 - [x] BuildKite
 - [x] Circle CI
 - [x] CLI
-- [ ] CodeShip
+- [x] CodeShip
 - [ ] Concourse
 - [x] GitLab
 - [ ] Heroku CI
