@@ -1,10 +1,9 @@
 version: 2.1
 orbs:
   katalonstudio: katalon-orb-test/katalonstudio@0.0.1
-jobs:
-  aws-cli-example:
-    executor: katalonstudio/katalon_orb_executor
-    steps:
+
+workflows:
+  build:
+    jobs:
       - katalonstudio/katjob:
           katalon_command: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
-      - run: echo "Run your code here"
