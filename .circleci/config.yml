@@ -5,5 +5,5 @@ orbs:
 workflows:
   build:
     jobs:
-      - katjob:
+      - katalonstudio/katjob:
           katalon_command: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
