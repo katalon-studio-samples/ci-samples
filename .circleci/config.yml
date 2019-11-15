@@ -7,7 +7,7 @@ jobs:
     executor: katalonstudio/katalon_orb_executor
     steps:
       - checkout
-      - katalon_orb_command
+      - katalonstudio/katalon_orb_command
 
 workflows:
   build:
