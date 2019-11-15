@@ -2,10 +2,10 @@ version: 2.1
 orbs:
   katalonstudio: katalon-orb-test/katalonstudio@0.0.1
 jobs:
-  build:
     executor:
       name: katalonstudio/katalon_orb_executor
       version: 6.3
     steps:
       - katalon_orb/katjob:
           katalon_command: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+          
