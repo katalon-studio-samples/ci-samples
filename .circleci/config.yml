@@ -6,5 +6,9 @@ orbs:
 workflows:
   main:
     jobs:
-      - katalon-orb-test/katjob:
+      run_test:
+        executor: katalonstudio/katalon_orb_executor
+      steps:
+        - checkout
+        - katalonstudio/katalon_orb_command:
           katalon_command: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
