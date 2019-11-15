@@ -2,6 +2,13 @@ version: 2.1
 orbs:
   katalonstudio: katalon-orb-test/katalonstudio@0.0.4
 
+jobs:
+  katalonstudio/katjob:
+    executor: katalonstudio/katalon_orb_executor
+    steps:
+      checkout
+      katalonstudio/katalon_orb_command
+      
 workflows:
   build:
     jobs:
