@@ -6,4 +6,3 @@ workflows:
   build:
     jobs:
       - katalonstudio/katjob
-          run katalon_command: "-browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'"
