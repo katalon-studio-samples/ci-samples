@@ -5,6 +5,6 @@ jobs:
   aws-cli-example:
     executor: katalonstudio/katalon_orb_executor
     steps:
-      - katjob/katjob:
+      - katalonstudio/katjob:
           katalon_command: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
       - run: echo "Run your code here"
