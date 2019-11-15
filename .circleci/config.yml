@@ -3,13 +3,13 @@ orbs:
   katalonstudio: katalon-orb-test/katalonstudio@0.0.4
 
 jobs:
-  katalonstudio/katjob:
+  runtest:
     executor: katalonstudio/katalon_orb_executor
     steps:
       - checkout
-      - katalonstudio/katalon_orb_command
+      - katalon_orb_command
 
 workflows:
   build:
     jobs:
-      - katalonstudio/katjob
+      - runtest
