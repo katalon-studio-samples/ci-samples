@@ -9,8 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - uses: ./ # Uses an action in the root directory
-    - name: Run Test katalon Studio
-      id: katalonstudio
-      uses: actions/katalonstudio@v1
+    - name: Katalon-KS
+      uses: kms-technology/katalon-github-action@0.2
       with:
         Katalon-Studio: 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
