@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  katalon_test_job:
+    runs-on: ubuntu-latest
+    name: Run test katalon
+    steps:
+    # To use this repository's private action, you must check out the repository
+    - name: Checkout
+      uses: actions/checkout@v1
+    - uses: ./ # Uses an action in the root directory
+    - name: Run Test katalon Studio
+      id: katalonstudio
+      uses: actions/katalonstudio@v1
+      with:
+        Katalon-Studio: 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
