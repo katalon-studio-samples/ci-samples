@@ -5,4 +5,4 @@ orbs:
 workflows:
     "katalon workflow":
         jobs:
-          - katalon-orb-test/katjob
+          - katalonstudio/katjob
