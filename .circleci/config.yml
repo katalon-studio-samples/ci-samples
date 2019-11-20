@@ -1,8 +1,8 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon-orb-test/katalonstudio@0.0.5
+    katalonstudio: katalon-orb-test/katalonstudio@0.0.7
 
 workflows:
     "katalon workflow":
         jobs:
-          - katalonstudio/katjob
+          - katjob
