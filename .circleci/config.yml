@@ -5,8 +5,4 @@ workflows:
   build:
     jobs:
         - katalonstudio/katjob:
-            executor: katalonstudio/katalon_orb_executor
-            steps:
-                    - checkkout
-                    - katalonstudio/katalon_command:
-                        katalon_param: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+                katalon_param: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
