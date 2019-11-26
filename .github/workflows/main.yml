@@ -10,6 +10,6 @@ jobs:
       uses: actions/checkout@v1
     - uses: ./ # Uses an action in the root directory
     - name: Get and run action
-      uses: actions/Katalon-Studio@0.1
+      uses: katalon-studio/katalon-studio-github-action@master
       with:
         Katalon-Studio: 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
