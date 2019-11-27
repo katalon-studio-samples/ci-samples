@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon/katalonstudio@10.0.0
+    katalonstudio: katalon/katalonstudio@12.0.0
 workflows:
   build:
     jobs:
