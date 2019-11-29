@@ -3,7 +3,7 @@ on: [push]
 jobs:
   katalon_test_job:
     runs-on: ubuntu-latest
-    name: Run katalon Studio Test CLI
+    name: Run katalon Studio Test CLI.
     steps:
     # To use this repository's private action, you must check out the repository
     - name: Checkout
