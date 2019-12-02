@@ -1,4 +1,4 @@
-ersion: 2.1
+version: 2.1
 orbs:
     katalonstudio: katalon/katalonstudio@25.0.0
 workflows:
