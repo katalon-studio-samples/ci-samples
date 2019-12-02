@@ -1,9 +1,10 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon/katalonstudio@27.0.0
+    katalonstudio: katalon/katalonstudio@28.0.0
 workflows:
   build:
     jobs:
         - katalonstudio/katjob:
                 version: "latest"
-                katalon_param: '-browserType="Chrome" -retry=3 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+                katalon_api_key: KATALON_API_KEY
+                katalon_param: '-browserType="Chrome" -retry=1 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
