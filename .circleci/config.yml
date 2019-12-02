@@ -6,4 +6,4 @@ workflows:
     jobs:
         - katalonstudio/katjob:
                 version: "latest"
-                katalon_param: '-browserType="Chrome" -retry=2 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+                katalon_param: '-browserType="Chrome" -retry=3 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
