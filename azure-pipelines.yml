@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: docker pull katalonstudio/katalon
-  displayName: 'Pull katalon sudio images'
+  displayName: 'Pull katalon studio images'
 - script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
   displayName: 'Runnning Katalon TS_RegressionTest'
 - task: PublishPipelineArtifact@0
