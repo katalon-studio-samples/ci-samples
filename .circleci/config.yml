@@ -8,4 +8,4 @@ workflows:
     jobs:
         - katalonstudio/katjob:
                 version: "latest"
-                katalon_command: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
+                COMMAND_ARGUMENTS: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
