@@ -8,6 +8,5 @@ workflows:
     jobs:
         - katalonstudio/katjob:
                 version: "latest"
-                command_execute_test:
-                    command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
+                command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
 
