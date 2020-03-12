@@ -8,6 +8,5 @@ workflows:
     jobs:
         - katalonstudio/katjob:
                 version: "latest"
-                API_KEY: $API_KEY
-                command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
+                katalonstudio/command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
 
