@@ -1,11 +1,11 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon/katalonstudio@16.0.0
+    katalonstudio: katalon/katalonstudio@17.0.0
 environment:
   API_KEY: $API_KEY
 workflows:
   build:
     jobs:
-        - katalonstudio/execute_test:
+        - katalonstudio/katjob:
                 version: "latest"
                 COMMAND_ARGUMENTS: '-browserType="Chrome" -retry=2 -statusDelay=16 -testSuitePath="Test Suites/TS_RegressionTest"'
