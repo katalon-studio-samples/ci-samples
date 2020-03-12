@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon/katalonstudio@10.0.0
+    katalonstudio: katalon/katalonstudio@11.0.0
 
 environment:
   KATALON_API_KEY: $KATALON_API_KEY
