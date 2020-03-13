@@ -6,7 +6,7 @@ environment:
 workflows:
   build:
     jobs:
-        - katalonstudio/run:
+        - katalonstudio/katjob:
                 version: "latest"
                 katalonstudio/kat_arguments: '-browserType="Chrome" -retry=1 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
 
