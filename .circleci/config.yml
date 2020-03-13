@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-    katalonstudio: katalon/katalonstudio@20.0.0
+    katalonstudio: katalon/katalon-studio@20.0.0
 environment:
   API_KEY: $API_KEY
 workflows:
