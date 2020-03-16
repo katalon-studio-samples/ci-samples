@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-    katalon-studio: katalon/katalon-studio@23.0.1
+    katalon-studio: katalon/katalon-studio@23.0.2
     
 workflows:
   build:
     jobs:
         - katalon-studio/run:
                 version: "latest"
-                command_arguments: '-browserType="Chrome" -retry=1 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+                command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
