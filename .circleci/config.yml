@@ -1,9 +1,7 @@
 version: 2.1
 orbs:
     katalon-studio: katalon/katalon-studio@23.0.1
-
-environment:
-  KATALON_API_KEY: $KATALON_API_KEY
+    
 workflows:
   build:
     jobs:
