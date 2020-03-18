@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-    katalon-studio: katalon/katalon-studio@23.0.7
+    katalon-studio: katalon/katalon-studio@23.0.8
     
 workflows:
   build:
