@@ -12,5 +12,10 @@ phases:
 artifacts:
   files:
     - report/*
+reports: #New
+  KatalonTestReports: # CodeBuild will create a report group called "KatalonTetReport".
+    files: #Store all of the files
+      - '**/*'
+    base-directory: 'reports' # Location of the reports 
 
 
