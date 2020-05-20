@@ -6,7 +6,7 @@ phases:
 
   build:
     commands:
-      - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
+      - docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalonc.sh -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
 artifacts:
   files:
     - report/*
