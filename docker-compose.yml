@@ -6,5 +6,5 @@ services:
     hostname: katalon
     volumes: 
       - .:/katalon/katalon/source
-    entrypoint: katalon-execute.sh
+    entrypoint: katalonc.sh
     command: -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
