@@ -9,8 +9,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Katalon-Studio
-      env:
-          KATALON_API_KEY: ${{ secrets.KATALON_API_KEY }}
       uses: katalon-studio/katalon-studio-github-action@1.2
       with:
         ks_api_key: $KATALON_API_KEY
