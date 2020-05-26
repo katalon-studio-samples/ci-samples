@@ -12,7 +12,7 @@ jobs:
     - name: Katalon-Studio
       env:
           KATALON_API_KEY: ${{ secrets.KATALON_API_KEY }}
-      uses: katalon-studio/katalon-studio-github-action@0.8
+      uses: katalon-studio/katalon-studio-github-action@0.9
       with:
         ks_api_key: $KATALON_API_KEY
         ks_command: "katalon-execute.sh -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath=Test Suites/TS_RegressionTest"
