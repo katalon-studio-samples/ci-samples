@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Katalon-Studio
-      uses: katalon-studio/katalon-studio-github-action@1.3
+      uses: katalon-studio/katalon-studio-github-action@1.4
       with:
         ks_api_key: ${{ secrets.KATALON_API_KEY }}
         ks_command: ${{ '-browserType=Chrome -retry=1 -statusDelay=15 -testSuitePath=Test Suites/TS_RegressionTest' }}
