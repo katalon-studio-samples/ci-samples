@@ -12,4 +12,4 @@ jobs:
       uses: katalon-studio/katalon-studio-github-action@0.9
       with:
         ks_api_key: ${{ secrets.KATALON_API_KEY }}
-        ks_command: "katalonc.sh -browserType=Chrome -retry=1 -statusDelay=15 -testSuitePath=Test Suites/TS_RegressionTest"
+        ks_command: "katalonc.sh -browserType=Chrome -retry=1 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'"
