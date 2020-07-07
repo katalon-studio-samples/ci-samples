@@ -1,15 +1,18 @@
-on: [push]
-
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
-  katalon_test_job:
-    runs-on: ubuntu-latest
-    name: Run katalon Studio Test CLI
+  build:
+    runs-on: windows-latest
     steps:
-    # To use this repository's private action, you must check out the repository
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Katalon-Studio
-      uses: katalon-studio/katalon-studio-github-action@1.4
+    - name: Katalon Studio Github Action
+      uses: katalon-studio/katalon-studio-github-action@v2
       with:
-        ks_api_key: ${{ secrets.KATALON_API_KEY }}
-        ks_command: -browserType=Chrome -retry=0 -statusDelay=15 -testSuitePath='Test Suites/TS_RegressionTest'
+          version: '7.5.5'
+          projectPath: '${{ github.workspace }}'
+          args: '-noSplash -retry=0 -browserType=Chrome -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest -apiKey= ${{ secrets.KATALON_API_KEY }} --config -webui.autoUpdateDrivers=true'
