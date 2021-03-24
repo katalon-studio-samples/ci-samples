@@ -13,7 +13,10 @@ Samples for CI configurations using Docker images at https://github.com/katalon-
 * File a bug in [GitHub Issues](https://github.com/katalon-analytics/katalon-analytics/issues).
 
 ### Katalon Studio
-[Katalon Studio](https://www.katalon.com) is a free and complete automation testing solution for Web, Mobile, and API testing with modern methodologies (Data-Driven Testing, TDD/BDD, Page Object Model, etc.) as well as advanced integration (JIRA, qTest, Slack, CI, Katalon TestOps, etc.). Learn more about [Katalon Studio features](https://www.katalon.com/features/).
+
+Katalon Studio is an all-in-one test automation solution for Web, API, mobile, and desktop built for both beginners and expert testers. [Learn more](https://docs.katalon.com/katalon-studio/docs/overview.html).
+
+Katalon Runtime Engine (KRE) is the test execution add-on of Katalon Studio. KRE allows you to execute automation tests in CLI mode. It can be used in a variety of scenarios, such as scheduling your tests, integrating with CI/CD system, or bundling your tests to execute in virtual containers like Docker. [Learn more](https://docs.katalon.com/katalon-studio/docs/intro-RE.html)
 
 ## Supported CIs
 
