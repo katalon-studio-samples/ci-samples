@@ -1,18 +1,23 @@
-image: katalonstudio/katalon
+# Use this template to run Katalon Studio script with Katalon docker image on Gitlab CI/CD pinelines.
+# 
+# Requirements
+# A Katalon Studio with the content saved in the root repository folder. If the project is under another location, please update KATALON_PROJECT_DIR with the corresponding value in variable section
+# A valid KRE license
+# A valid Katalon API key which is stored as KATALON_API_KEY in Settings/CI/CD/Variables
+
+image: 'katalonstudio/katalon' # Use the latest Katalon docker image, we can also specific another tag such to use another version of Katalon Runtime Engine as `katalonstudio/katalon:8.1.2`, `katalonstudio/katalon:8.3.0` 
 services:
   - docker:dind
+
+variables:
+  # Specify Katalon Studio project directory. By default, it is under root project folder.
+  KATALON_PROJECT_DIR: $CI_PROJECT_DIR
 
 stages:
   - test
 
 test_job:
   stage: test
+  # Update your katalonc command with your desired katalonc commands. All of katalonc supported arguments can be found in https://docs.katalon.com/katalon-studio/docs/console-mode-execution.html
   script:
-    - katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
-  artifacts:
-    name: "$CI_COMMIT_REF_NAME"
-    paths:
-      - report/
-    reports:
-      junit:
-      - 'report/*.xml'
+    - katalonc.sh -projectPath=$KATALON_PROJECT_DIR -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=20 -testSuitePath="Test Suites/New Test Suite"
