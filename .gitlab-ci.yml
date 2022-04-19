@@ -16,4 +16,4 @@ test_job:
   stage: test
   # Update your desired katalonc commands. All of katalonc supported arguments can be found at this document https://docs.katalon.com/katalon-studio/docs/console-mode-execution.html
   script:
-    - katalonc.sh -projectPath=$KATALON_PROJECT_DIR -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=20 -testSuitePath="Test Suites/New Test Suite"
+    - katalonc.sh -projectPath=$KATALON_PROJECT_DIR -apiKey=$KATALON_API_KEY -browserType="Chrome" -retry=0 -statusDelay=20 -testSuitePath="Test Suites/TS_RegressionTest"
