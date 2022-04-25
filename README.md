@@ -22,7 +22,7 @@ Katalon Runtime Engine (KRE) is the test execution add-on of Katalon Studio. KRE
 
 - [x] Azure Devops Services
 - [ ] AppVeyor
-- [x] AWS CodeBuild
+- [x] [AWS CodeBuild](https://docs.katalon.com/katalon-studio/docs/aws-codebuild-docker-image-integration.html)
 - [x] Bitbucket
 - [x] BuildKite
 - [x] Circle CI
