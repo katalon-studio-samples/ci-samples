@@ -29,7 +29,7 @@ Katalon Runtime Engine (KRE) is the test execution add-on of Katalon Studio. KRE
 - [x] CLI
 - [x] CodeShip
 - [ ] Concourse
-- [x] GitLab
+- [x] [GitLab](https://docs.katalon.com/katalon-studio/docs/continuous_integration_gitlab.html)
 - [ ] Heroku CI
 - [x] Jenkins
 - [ ] Semaphore
