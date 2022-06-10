@@ -15,5 +15,5 @@ spec:
         command:
          - "bin/bash"
          - "-c"
-         - "katalonc.sh -projectPath='$(pwd)' -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"
+         - "katalonc.sh -projectPath=$(pwd) -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"
       restartPolicy: Never
