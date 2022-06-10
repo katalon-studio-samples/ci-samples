@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{.Values.name}}
+spec:
+  template:
+    metadata:
+      name: {{.Values.name}}
+      labels:
+        app: {{.Values.name}}
+    spec:
+      containers:
+      - name: counter
+        image: {{.Values.image}}
+        command:
+         - "bin/bash"
+         - "-c"
+         - "katalonc.sh -projectPath=/tmp/project -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"
+      restartPolicy: Never

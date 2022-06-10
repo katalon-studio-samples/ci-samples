@@ -1,0 +1,2 @@
+name: countdown
+image: ${artifact.metadata.image}
