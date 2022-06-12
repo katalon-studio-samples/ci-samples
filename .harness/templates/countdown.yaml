@@ -13,7 +13,7 @@ spec:
       - name: counter
         image: {{.Values.image}}
         command: ["/bin/sh"]
-        args: ["-c", "katalonc.sh -projectPath=/workspace -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
+        args: ["-c", "katalonc.sh -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
 #         command:
 #          - "bin/bash"
 #          - "-c"
