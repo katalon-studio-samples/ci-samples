@@ -12,7 +12,7 @@ spec:
       volumes:
       - name: secrets-volume
         hostPath:
-          path: D:\katalon-folder\ci-samples
+          path: /host_mnt/d/katalon-folder/ci-samples
       containers:
       - name: counter
         image: {{.Values.image}}
