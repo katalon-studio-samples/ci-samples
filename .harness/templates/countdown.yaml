@@ -20,7 +20,7 @@ spec:
         volumeMounts:
         - name: secrets-volume
           mountPath: /tmp/project
-          readOnly: true
+#           readOnly: true
         command: ["/bin/sh"]
         args: ["-c","ls /tmp/project"]
 #         args: ["-c","katalonc.sh -projectPath=/tmp/project -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
