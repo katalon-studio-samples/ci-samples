@@ -22,8 +22,8 @@ spec:
           mountPath: /tmp/project
           readOnly: true
         command: ["/bin/sh"]
-#         args: ["-c","docker run katalonstudio/katalon katalonc.sh"]
-        args: ["-c","katalonc.sh -projectPath=/tmp/project -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
+        args: ["-c","ls -l /tmp/project"]
+#         args: ["-c","katalonc.sh -projectPath=/tmp/project -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
 #         command:
 #          - "bin/bash"
 #          - "-c"
