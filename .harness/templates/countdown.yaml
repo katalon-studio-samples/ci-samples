@@ -9,21 +9,21 @@ spec:
       labels:
         app: {{.Values.name}}
     spec:
-#       volumes:
-#       - name: secrets-volume
-#         hostPath:
-#           path: /host_mnt/d/katalon-folder/ci-samples
+      volumes:
+      - name: secrets-volume
+        hostPath:
+          path: /run/desktop/mnt/host/d/katalon-folder/ci-samples
       containers:
       - name: counter
         image: {{.Values.image}}
 #         workingDir: /tmp/project
-#         volumeMounts:
-#         - name: secrets-volume
-#           mountPath: /tmp/project
-#           readOnly: true
+        volumeMounts:
+        - name: secrets-volume
+          mountPath: /tmp/project
+          readOnly: true
         command: ["/bin/sh"]
 #         args: ["-c","docker run katalonstudio/katalon katalonc.sh"]
-        args: ["-c","katalonc.sh -projectPath=d/katalon-folder/ci-samples -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
+        args: ["-c","katalonc.sh -projectPath=/tmp/project -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
 #         command:
 #          - "bin/bash"
 #          - "-c"
