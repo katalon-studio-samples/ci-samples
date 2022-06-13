@@ -11,6 +11,8 @@ spec:
     spec:
       volumes:
       - name: secrets-volume
+        hostPath:
+          path: /
       containers:
       - name: counter
         image: {{.Values.image}}
