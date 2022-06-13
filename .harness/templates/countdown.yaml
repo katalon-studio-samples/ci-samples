@@ -14,7 +14,7 @@ spec:
         image: {{.Values.image}}
         workingDir: /tmp/project
         command: ["/bin/sh"]
-        args: ["-c","ls /tmp/"]
+        args: ["-c","ls /tmp/project"]
 #         args: ["-c","katalonc.sh -projectPath=/tmp/project/test.prj -browserType='Chrome' -testSuiteCollectionPath='Test Suites/TS_RegressionTestCollection' -apiKey='555232dc-21e0-4567-8bd9-a7335fa67975'"]
 #         command:
 #          - "bin/bash"
