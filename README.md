@@ -37,7 +37,7 @@ Katalon Runtime Engine (KRE) is the test execution add-on of Katalon Studio. KRE
 - [ ] Solano
 - [x] TravisCI
 - [ ] VSTS CI
-- [ ] Google Cloud Platform Cloud Build
+- [x] Google Cloud Platform Cloud Build
 
 ## CLI
 

@@ -1,0 +1,11 @@
+steps:
+- name: 'docker'
+  args: ['pull', 'katalonstudio/katalon']
+- name: 'docker'
+  entrypoint: 'sh'
+  args: ['-c', 'docker run -t --rm -v /workspace:/tmp/project katalonstudio/katalon katalonc.sh -projectPath=/tmp/project -browserType="Chrome" -retry=0 -retryStrategy=immediately -testSuitePath="Test Suites/TS_RegressionTest" --config -webui.autoUpdateDrivers=true -apiKey=$$KATALON_API_KEY']
+  secretEnv: ['KATALON_API_KEY']
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/KATALON_API_KEY/versions/1
+    env: 'KATALON_API_KEY'
