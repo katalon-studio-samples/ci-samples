@@ -1,2 +1,3 @@
 name: countdown
 image: ${artifact.metadata.image}
+apiKey: ${serviceVariable.apiKey}
