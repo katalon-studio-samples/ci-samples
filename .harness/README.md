@@ -118,7 +118,7 @@ From Setup → Add a new application
 ![image](https://user-images.githubusercontent.com/79688900/173535769-76a2a2e5-fadd-4c83-87f4-7138276cc478.png)
 - In workflow variable: create a new variable name JobName with default value is the name of your manifest file (in values.yaml or in main yaml file)
 ![image](https://user-images.githubusercontent.com/79688900/173543405-6edbb6e9-6b9b-4bf7-bd13-b0ecb05b0ffc.png)
-![image](https://user-images.githubusercontent.com/79688900/173544496-fd541ea7-79eb-4778-9959-dff64c400b66.png)
+![image](https://user-images.githubusercontent.com/79688900/174270701-3c685dfe-d94a-4947-9b90-cd834f1f819b.png)
 
 - In rolling -> Deploy: Create a new Apply step
   - File Paths: is your manifest file path (in my example is templates/test.yaml)
