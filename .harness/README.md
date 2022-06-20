@@ -44,7 +44,7 @@ Kubernetes:
 ## 🔧 Setup <a name = "setup"></a>
 
 ### Install Delegate
-![image](https://user-images.githubusercontent.com/79688900/173531304-56827862-61d5-4ed4-83d7-7b56aa0d766a.png)
+![173531304-56827862-61d5-4ed4-83d7-7b56aa0d766a](https://user-images.githubusercontent.com/79688900/174525620-a356a57f-14bd-4ed0-901f-dbe9d16093fc.png)
 
 From Setup on the right sidebar → choose Harness Delegate → click Install Delegate and choose the corresponding delegate
 
@@ -58,7 +58,7 @@ Download the delegate and run it as instructed in the downloaded folder.
 
 ### Install Connector
 From Setup → Connectors
-![image](https://user-images.githubusercontent.com/79688900/173531473-8d106799-ea24-43fa-8603-1767b362b521.png)
+![173531473-8d106799-ea24-43fa-8603-1767b362b521](https://user-images.githubusercontent.com/79688900/174525633-608b75b3-e725-4231-88dd-f7bfbb6e28a1.png)
 - Choose Artifact Servers → Select Docker Registry Type → Input the Display Name and Docker Registry URL → Test the connection → Submit
 
 - Back out and choose Source Repo Providers (this is where GitHub link) → Create a new Git connector → Test → Submit
@@ -98,7 +98,7 @@ From Setup → Add a new application
   - In service: Add an artifact source as a Docker Registry Type we have defined earlier and input Docker Image Name = katalonstudio/katalon
 
   - Artifact History to the right: click it and then manually pull the artifact to check whether the image is right or not
-  ![image](https://user-images.githubusercontent.com/79688900/173532784-b2ab60cd-af25-4eec-94ee-571d13a54b64.png)
+  ![173532784-b2ab60cd-af25-4eec-94ee-571d13a54b64](https://user-images.githubusercontent.com/79688900/174525713-6a601754-ea9a-477a-ab71-acee6c6b2395.png)
   - Manifests (Important): You can edit the manifest right in it or link the manifest from the Github repo
   ![image](https://user-images.githubusercontent.com/79688900/173533128-ec8cd804-a2fd-46a9-8826-35b02710c19a.png)
     Manifests will define a job for kubernetes to run a docker image command. Sample YAML file can be found here: https://github.com/katalon-studio-samples/ci-samples (.harness folder)
@@ -117,7 +117,7 @@ From Setup → Add a new application
 - Environment, Service and Infrastructure Definition are inputted with those we setup earlier
 ![image](https://user-images.githubusercontent.com/79688900/173535769-76a2a2e5-fadd-4c83-87f4-7138276cc478.png)
 - In workflow variable: create a new variable name JobName with default value is the name of your manifest file (in values.yaml or in main yaml file)
-![image](https://user-images.githubusercontent.com/79688900/173543405-6edbb6e9-6b9b-4bf7-bd13-b0ecb05b0ffc.png)
+![173543405-6edbb6e9-6b9b-4bf7-bd13-b0ecb05b0ffc](https://user-images.githubusercontent.com/79688900/174525781-c2b071f6-4802-4575-9a41-65d5851d9c6b.png)
 ![image](https://user-images.githubusercontent.com/79688900/174270701-3c685dfe-d94a-4947-9b90-cd834f1f819b.png)
 
 - In rolling -> Deploy: Create a new Apply step
@@ -129,7 +129,7 @@ From Setup → Add a new application
 Final workflow will be like this: ![image](https://user-images.githubusercontent.com/79688900/173544931-69c3295a-b263-4651-87aa-c3bf84c8e10b.png)
 ## 🚀 Running <a name="running"></a>
 Press the Deploy button to start the running
-![image](https://user-images.githubusercontent.com/79688900/173545527-f3cbbe0f-488d-4cf5-b4c9-742f7ad033a7.png)
+![173545527-f3cbbe0f-488d-4cf5-b4c9-742f7ad033a7](https://user-images.githubusercontent.com/79688900/174525816-ad6fa4d9-966f-4dff-957d-7e2cbdec62bb.png)
 You can add triggers if you want to trigger the workflow when the artifact is release new, on scheduled time, on github events,...
 
 During the execution, you can see the log in Docker container: 
@@ -150,7 +150,7 @@ To view the reports from the build, you can enable [Katalon TestOps Integration]
 ## 🔧  Troubleshoot <a name = "acknowledgement"></a>
 
 If you don’t see the Delegate Profile/ Token, please create one here:
-![image](https://user-images.githubusercontent.com/79688900/173548746-3b5d4ed1-677e-4bed-94f1-1b885c77f8d8.png)
+![173548746-3b5d4ed1-677e-4bed-94f1-1b885c77f8d8](https://user-images.githubusercontent.com/79688900/174525836-ed50cf62-d936-40e4-95dd-68010e8e65ab.png)
 If you encounter **'The Job "..." is invalid: spec.template: Invalid value: core.PodTemplateSpec'**:
 - Run `kubectl delete jobs --all` in cmd (due to Kubernetes job is not deleted after run)
 If you encounter **User "system:anonymous" cannot get path "/".** or sth alike
