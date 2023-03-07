@@ -9,6 +9,6 @@ pipelines:
           # Run Test
           - katalonc.sh -projectPath=./  -browserType="Chrome" -apiKey=$KATALON_API_KEY -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -licenseRelease=true -orgID $KATALON_ORG_ID
         artifacts: # defining the artifacts .
-          - report/**image: katalonstudio/katalon
+          - report/**
           
 #KATALON_ORG_ID and KATALON_API_KEY must be stored as a repository variable
